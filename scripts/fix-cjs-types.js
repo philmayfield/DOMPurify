@@ -11,7 +11,7 @@ const path = require('node:path');
   // it to be assigned to `module.exports`. We need to change the
   // type declarations to match what rollup changed it to. Remove
   // the "default" export from the `export { ... }` statement.
-  let fixed = types.replace(', _default as default', '');
+  let fixed = types.replace(', foo as default', '');
 
   // Verify that we actually removed something in case the
   // type declarations are different to what we expected.
@@ -22,7 +22,7 @@ const path = require('node:path');
   // Append `export = _default;` to match the
   // `module.exports = DOMPurify` statement
   // that Rollup creates.
-  fixed += '\nexport = _default;\n';
+  fixed += '\nexport = foo;\n';
 
   await fs.writeFile(fileName, fixed);
 })().catch((ex) => {

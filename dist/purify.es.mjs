@@ -1335,7 +1335,7 @@ function createDOMPurify() {
   };
   return DOMPurify;
 }
-var purify = createDOMPurify();
+const foo = createDOMPurify();
 
-export { purify as default };
+export { foo as default };
 //# sourceMappingURL=purify.es.mjs.map

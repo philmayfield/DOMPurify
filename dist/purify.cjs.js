@@ -1337,7 +1337,7 @@ function createDOMPurify() {
   };
   return DOMPurify;
 }
-var purify = createDOMPurify();
+const foo = createDOMPurify();
 
-module.exports = purify;
+module.exports = foo;
 //# sourceMappingURL=purify.cjs.js.map

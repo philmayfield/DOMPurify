@@ -96,7 +96,7 @@ const _createTrustedTypesPolicy = function (trustedTypes, purifyHostElement) {
   }
 };
 
-function createDOMPurify(window: WindowLike = getGlobal()) {
+function createDOMPurify(window: WindowLike = getGlobal()): DOMPurify {
   const DOMPurify: DOMPurify = (root: WindowLike) => createDOMPurify(root);
 
   DOMPurify.version = VERSION;
@@ -1667,7 +1667,9 @@ function createDOMPurify(window: WindowLike = getGlobal()) {
   return DOMPurify;
 }
 
-export default createDOMPurify();
+const foo: DOMPurify = createDOMPurify();
+
+export default foo;
 
 interface DOMPurify {
   /**

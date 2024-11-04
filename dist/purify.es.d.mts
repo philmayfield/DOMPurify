@@ -202,7 +202,7 @@ interface UseProfilesConfig {
     html?: boolean | undefined;
 }
 
-declare const _default: DOMPurify;
+declare const foo: DOMPurify;
 
 interface DOMPurify {
     /**
@@ -396,4 +396,4 @@ type WindowLike = Pick<typeof globalThis, 'DocumentFragment' | 'HTMLTemplateElem
     trustedTypes?: typeof window.trustedTypes;
 };
 
-export { type Config, type Hook, type HookName, type RemovedAttribute, type RemovedElement, type UponSanitizeAttributeHook, type UponSanitizeAttributeHookEvent, type UponSanitizeElementHook, type UponSanitizeElementHookEvent, type WindowLike, _default as default };
+export { type Config, type Hook, type HookName, type RemovedAttribute, type RemovedElement, type UponSanitizeAttributeHook, type UponSanitizeAttributeHookEvent, type UponSanitizeElementHook, type UponSanitizeElementHookEvent, type WindowLike, foo as default };
